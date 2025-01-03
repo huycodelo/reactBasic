@@ -1,11 +1,18 @@
 import logo from './logo.svg';
-import './App.css';
+// import img from './bb.png';
+// import img1 from './bb1.jpg';
+
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={img} className="App-logo" alt="logo" /> */}
+        {/* <img src={img1} className="App-logo" alt="logo" /> */}
+
+
         <p>
           Hello world with reactjs huy
         </p>
