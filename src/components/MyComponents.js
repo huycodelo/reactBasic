@@ -8,8 +8,15 @@ class MyComponents extends React.Component
 {
 
     state= {
-        FirstName: 'huy',
-        LastName: ''
+        FirstName: '',
+        LastName: '',
+        arrHuy: [
+            { id: 123123, job: 'frontend', sale:'500$' },
+            { id: 123, job: 'backend', sale:'400$' },
+            { id: 12312312312123, job: 'dev', sale:'300$' },
+
+
+        ]
     }
     handleChangeFirstname = (event) => {
         this.setState({
@@ -54,10 +61,13 @@ class MyComponents extends React.Component
                     <br/>
                 </form>
 
-<ComponentsChild name = {'thu 1'} />
-<ComponentsChild name = {'thu 2'} />
-<ComponentsChild name = {'thu 3'} />
-
+                <ComponentsChild
+                name = {this.state.FirstName}
+                age = {'21'}
+                address = {'129/64 lien khu 5-6'}
+                arrHuy = {this.state.arrHuy}
+                />
+    
                 
             </React.Fragment>
 

@@ -27,15 +27,27 @@ class ComponentsChild extends React.Component
 
     render() 
         {
-            console.log('>>> CALL RENDER: ',this.state)
+            console.log('>>> CHECK PROS : ',this.props)
 
+
+            //javascript hay dung
+            let { name , age, address, arrHuy } = this.props;
             return(
-            <React.Fragment>
-                <div>
-                    day la child {this.props.name}
-                </div>
-
-                
+            <React.Fragment> 
+                    <div className='list-job'>
+                        { 
+                            arrHuy.map((item,index) => {
+                                return (
+                                    <div key={item.id} >
+                                        {item.job} - {item.sale}
+                                    </div>
+                                )
+                            } ) 
+                        }
+                    </div>
+                    <div>
+                        day la {this.props.name} - {this.props.age} - {this.props.address}
+                    </div>
             </React.Fragment>
             );
         }
